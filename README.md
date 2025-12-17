@@ -121,6 +121,7 @@ AI_CableValidator/
 ```
 
 Frontend: Next.js application located in /app
+
 Backend: NestJS API located in /backend
 
 ##  How to Run the Project
