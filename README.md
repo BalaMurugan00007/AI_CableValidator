@@ -62,27 +62,3 @@ This mirrors how real engineering reviews are performed.
 
 ---
 
-
-AI_CableValidator/
-├── app/                     # Next.js frontend
-│   ├── page.tsx
-│   ├── layout.tsx
-│   └── globals.css
-├── backend/                 # NestJS backend
-│   ├── src/
-│   │   └── design-validation/
-│   │       ├── design-validation.controller.ts
-│   │       ├── design-validation.service.ts
-│   │       └── design-validation.module.ts
-│   ├── package.json
-│   └── tsconfig.json
-├── public/
-├── package.json
-├── README.md
-└── .gitignore
-
-## How to Run the Project
-cd backend
-npm install
-npm run start
-
