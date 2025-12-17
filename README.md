@@ -83,6 +83,7 @@ This mirrors how real engineering reviews are performed.
 ---
 
 ##  Project Structure
+```text
 AI_CableValidator/
 │
 ├── frontend/                     # Frontend (Next.js)
@@ -120,7 +121,7 @@ AI_CableValidator/
 ├── .gitignore
 ├── README.md
 └── package.json                  # (optional root scripts)
-
+```
 
 ---
 
