@@ -86,19 +86,15 @@ This mirrors how real engineering reviews are performed.
 ```text
 AI_CableValidator/
 │
-├── frontend/                     # Frontend (Next.js)
-│   ├── app/
-│   │   ├── api/                  # (optional) frontend-only API routes
-│   │   ├── design-validator/
-│   │   │   └── page.tsx          # Design validation UI
-│   │   ├── layout.tsx
-│   │   ├── globals.css
-│   │   └── favicon.ico
-│   │
-│   ├── public/
-│   ├── package.json
-│   ├── tsconfig.json
-│   └── next.config.ts
+├── app/                          # Frontend (Next.js)
+│   ├── api/                      # (optional) frontend API routes
+│   ├── design-validator/
+│   │   └── page.tsx              # Design validation UI
+│   ├── layout.tsx
+│   ├── globals.css
+│   └── favicon.ico
+│
+├── public/
 │
 ├── backend/                      # Backend (NestJS)
 │   ├── src/
@@ -118,12 +114,14 @@ AI_CableValidator/
 │   ├── tsconfig.build.json
 │   └── nest-cli.json
 │
-├── .gitignore
+├── package.json                  # Frontend scripts
 ├── README.md
-└── package.json                  # (optional root scripts)
+└── .gitignore
+
 ```
 
----
+Frontend: Next.js application located in /app
+Backend: NestJS API located in /backend
 
 ##  How to Run the Project
 
