@@ -151,11 +151,18 @@ http://localhost:3000
 npm install
 npm run dev
 
+---
+
 Frontend runs at:
 http://localhost:3001/design-validator
 
-Example Input
+Example Input:
 IEC 60502-1 cable, 16 sqmm Cu Class 2, PVC insulation 0.9 mm
+
+---
+###Example Test cases 
+<img width="273" height="848" alt="image" src="https://github.com/user-attachments/assets/5e212058-5cdd-49b2-95fd-1708464645d5" />
+
 
 
 
