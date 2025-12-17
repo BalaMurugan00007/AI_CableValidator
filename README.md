@@ -147,11 +147,11 @@ GEMINI_API_KEY=your_api_key_here
 Backend runs at:
 http://localhost:3000
 
+---
+
 ### Frontend Setup
 npm install
 npm run dev
-
----
 
 Frontend runs at:
 http://localhost:3001/design-validator
@@ -162,9 +162,9 @@ IEC 60502-1 cable, 16 sqmm Cu Class 2, PVC insulation 0.9 mm
 ---
 ### Sample Test Cases (For Review & Demo) 
 Test Case 1 — Fully Correct Design
-Input
+Input:
 IEC 60502-1, 0.6/1 kV, Cu, Class 2, 10 mm², PVC, insulation 1.0 mm
-Expected AI Output
+Expected AI Output:
 •	Insulation thickness → PASS
 •	CSA → PASS
 •	Material/class → PASS
@@ -176,9 +176,9 @@ output:-
 <img width="1091" height="597" alt="Screenshot 2025-12-16 202040" src="https://github.com/user-attachments/assets/5826fb30-18c1-41f6-a7e5-20498c76b296" />
 
 Test Case 2 — Borderline / Warning Case
-Input
+Input:
 IEC 60502-1 cable, 16 sqmm Cu Class 2, PVC insulation 0.9 mm
-Expected
+Expected:
 •	Insulation thickness → WARN
 •	Explanation referencing nominal vs tolerance
 •	Medium confidence
@@ -188,9 +188,9 @@ output:
 
 ---
 Test Case 3 — Clearly Invalid Design
-Input
+Input:
 IEC 60502-1, 0.6/1 kV, Cu, Class 2, 10 mm², PVC, insulation 0.5 mm
-Expected
+Expected:
 •	Insulation thickness → FAIL
 •	Clear reasoning
 •	Low confidence not acceptable (must still decide)
@@ -201,9 +201,9 @@ output:
 ---
 
 Test Case 4 — Ambiguous Input
-Input
+Input:
 10 sqmm copper cable with PVC insulation
-Expected
+Expected:
 •	Missing standard → WARN
 •	Voltage unspecified → WARN
 •	AI explanation clearly states assumptions
