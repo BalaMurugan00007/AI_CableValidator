@@ -164,9 +164,11 @@ IEC 60502-1 cable, 16 sqmm Cu Class 2, PVC insulation 0.9 mm
 Test Case 1 — Fully Correct Design
 
 Input:
+
 IEC 60502-1, 0.6/1 kV, Cu, Class 2, 10 mm², PVC, insulation 1.0 mm
 
 Expected AI Output:
+
 •	Insulation thickness → PASS
 
 •	CSA → PASS
@@ -183,9 +185,11 @@ output:-
 Test Case 2 — Borderline / Warning Case
 
 Input:
+
 IEC 60502-1 cable, 16 sqmm Cu Class 2, PVC insulation 0.9 mm
 
 Expected:
+
 •	Insulation thickness → WARN
 
 •	Explanation referencing nominal vs tolerance
@@ -199,9 +203,11 @@ output:
 Test Case 3 — Clearly Invalid Design
 
 Input:
+
 IEC 60502-1, 0.6/1 kV, Cu, Class 2, 10 mm², PVC, insulation 0.5 mm
 
 Expected:
+
 •	Insulation thickness → FAIL
 
 •	Clear reasoning
@@ -217,9 +223,11 @@ output:
 Test Case 4 — Ambiguous Input
 
 Input:
+
 10 sqmm copper cable with PVC insulation
 
 Expected:
+
 •	Missing standard → WARN
 
 •	Voltage unspecified → WARN
