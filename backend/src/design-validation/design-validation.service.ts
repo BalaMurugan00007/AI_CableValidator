@@ -18,7 +18,7 @@ export class DesignValidationService {
     });
   }
 
-  // 🔁 Retry wrapper (handles transient overloads only)
+  // Retry wrapper (handles transient overloads only)
   private async callGeminiWithRetry(
     prompt: string,
     retries = 1
@@ -141,7 +141,7 @@ RETURN ONLY VALID JSON.
 
       const parsed = JSON.parse(cleanedText);
 
-      // 🛡️ Minimal safety checks (NO LOGIC DERIVATION)
+      //  Minimal safety checks (NO LOGIC DERIVATION)
       if (!parsed.reasoning || typeof parsed.reasoning !== "string") {
         parsed.reasoning =
           "The design was reviewed, but the overall engineering assessment could not be clearly determined from the provided information.";
@@ -159,7 +159,7 @@ RETURN ONLY VALID JSON.
 
       return parsed;
     } catch (err: any) {
-      console.error("🔥 Design validation failed:", err);
+      console.error(" Design validation failed:", err);
 
       if (err?.status === 503) {
         throw new InternalServerErrorException(
