@@ -43,7 +43,7 @@ This mirrors how real engineering reviews are performed.
 
 ---
 
-##  System Architecture
+## System Architecture
 
 ```text
 [ Frontend (Next.js) ]
@@ -59,6 +59,103 @@ This mirrors how real engineering reviews are performed.
         |  AI Reasoning Output
         v
 [ Validation Results + Explanation ]
+```
 
 ---
+
+##  Tech Stack
+
+### Frontend
+- Next.js (App Router)
+- TypeScript
+- Material UI (MUI)
+
+### Backend
+- NestJS
+- TypeScript
+- Google Gemini API
+
+### AI
+- Gemini 2.5 (Flash / Lite)
+- Prompt-based engineering reasoning
+- Structured JSON outputs
+
+---
+
+##  Project Structure
+AI_CableValidator/
+│
+├── frontend/                     # Frontend (Next.js)
+│   ├── app/
+│   │   ├── api/                  # (optional) frontend-only API routes
+│   │   ├── design-validator/
+│   │   │   └── page.tsx          # Design validation UI
+│   │   ├── layout.tsx
+│   │   ├── globals.css
+│   │   └── favicon.ico
+│   │
+│   ├── public/
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── next.config.ts
+│
+├── backend/                      # Backend (NestJS)
+│   ├── src/
+│   │   ├── design-validation/
+│   │   │   ├── design-validation.controller.ts
+│   │   │   ├── design-validation.service.ts
+│   │   │   └── design-validation.module.ts
+│   │   │
+│   │   ├── app.controller.ts
+│   │   ├── app.module.ts
+│   │   ├── app.service.ts
+│   │   └── main.ts
+│   │
+│   ├── test/
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── tsconfig.build.json
+│   └── nest-cli.json
+│
+├── .gitignore
+├── README.md
+└── package.json                  # (optional root scripts)
+
+
+---
+
+##  How to Run the Project
+
+### Prerequisites
+- Node.js (v18+ recommended)
+- npm
+- Google Gemini API Key
+
+---
+
+### Backend Setup
+
+```bash
+cd backend
+npm install
+npm run start
+```
+Create a .env file inside backend/:
+GEMINI_API_KEY=your_api_key_here
+
+Backend runs at:
+http://localhost:3000
+
+### Frontend Setup
+npm install
+npm run dev
+
+Frontend runs at:
+http://localhost:3001/design-validator
+
+Example Input
+IEC 60502-1 cable, 16 sqmm Cu Class 2, PVC insulation 0.9 mm
+
+
+
 
